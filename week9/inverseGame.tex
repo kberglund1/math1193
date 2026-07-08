@@ -1,0 +1,58 @@
+\documentclass{ximera}
+
+\title{Inverse Game}
+\author{Kenneth Berglund}
+
+\begin{document}
+\begin{abstract}
+    Playing a game to get a sense of inverse functions.
+\end{abstract}
+\maketitle
+
+Let's play a game! Divide into pairs and choose who will be
+Player 1 and Player 2. 
+
+\begin{enumerate}
+    \item Player 1 chooses a sequence of 3 operations (addition, 
+    multiplication, subtraction or division) in secret. For example:
+    \begin{itemize}
+        \item Add 2, multiply by 4, subtract 1
+    \end{itemize}
+    \item Player 1 writes down a function \(f\) which applies those operations,
+    in order, to the variable \(x\). For example:
+    \begin{itemize}
+        \item \(f(x) = 4(x + 2) - 1\)
+    \end{itemize}
+    \item Player 1 chooses 3 \(x\)-values in secret. Then, they plug them into their function,
+    and write down the outputs. For example:
+    \begin{itemize}
+        \item \(f(0) = 7\), \(f(1) = 11\) and \(f(0.5) = 9\). So Player 1
+        writes down 7, 11, 9.
+    \end{itemize}
+    \item Player 1 shows Player 2 their function \(f\) and the outputs they wrote down.
+    For example:
+    \begin{itemize}
+        \item ``My function is \(f(x) = 4(x + 2) - 1\), and my outputs are 7, 11, and 9.''
+    \end{itemize}
+    \item Player 2 then tries to determine the original \(x\)-values that
+    Player 1 chose. For example:
+    \begin{itemize}
+        \item ``Your original \(x\)-values were 0, 11, and 0.5.''
+    \end{itemize}
+    \item Player 2 writes down a sequence of 3 operations that they
+    used to determine those \(x\)-values. For example:
+    \begin{itemize}
+        \item Add 1, divide by 4, subtract 2
+    \end{itemize}
+    \item Together, the players write down a function \(g\) that always gives the 
+    starting value if you're given an output. Base this on your operations
+    from the previous part. For example:
+    \begin{itemize}
+        \item \(g(x) = \frac{x + 1}{4} - 2\)
+    \end{itemize}
+    \item Take a second together to consider how \(g\) and \(f\) are related. 
+    \item Switch roles and play again!
+\end{enumerate}
+
+
+\end{document}
