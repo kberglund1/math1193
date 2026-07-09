@@ -1,0 +1,27 @@
+\documentclass{ximera}
+
+\title{Logarithmic Equation}
+\author{Kenneth Berglund}
+
+\begin{document}
+\begin{abstract}
+    Helping Julia solve a logarithmic equation.
+\end{abstract}
+\maketitle
+
+Julia worked on solving the equation \(\ln(x) + \ln(x - 21) = 2\). Her
+work is as follows:
+
+\begin{align*}
+\ln(x) + \ln(x - 21) & = 2 & \text{(original equation)}\\
+e^{\ln(x)} + e^{ln(x - 21)} & = e^2 & \text{(exponentiating on both sides)} \\
+x + (x - 21) & = e^2 & \text{(canceling logs and exponents)}\\
+2x - 21 & = e^2 & \text{(combining like terms)}\\
+2x & = e^2 + 21 & \text{(adding 21 on both sides)}\\
+x & = \frac{e^2 + 21}{2} & \text{(dividing by 2 on both sides)}\\
+\end{align*}
+
+Is Julia's work correct? How can you tell? If it's not correct, identify
+the step in which she made a mistake and try to find a solution.
+
+\end{document}
