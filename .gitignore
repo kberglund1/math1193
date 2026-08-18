@@ -338,3 +338,6 @@ gpgkey
 
 # File used to update DevEnv config-files  (xmlatex updateDevEnv)
 xmDevEnvFiles.tgz
+
+# Each problem as a separate page
+math1193Activities.tex

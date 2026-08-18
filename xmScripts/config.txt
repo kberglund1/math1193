@@ -21,7 +21,7 @@ YOUR_EMAIL="noproblem@dummy.org"
 # !! DO NOT SAVE THE KEY IN THIS config.txt FILE   !!
 #
 
-## : "${XIMERA_NAME:=myreponame}"
+## : "${XIMERA_NAME:=1193activities}"
 ## : "${XIMERA_URL:=http://localhost:2000/}"
 ## : "${XIMERA_URL:=https://xerxes.ximera.org/}"
 ## : "${XIMERA_URL:=https://ximera.osu.edu/}"
