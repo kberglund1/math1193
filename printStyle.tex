@@ -1,0 +1,5 @@
+\let\oldactivity\activity
+\renewcommand{\activity}[1]{%
+  \setcounter{problem}{0}%
+  \oldactivity{#1}%
+}
