@@ -3,3 +3,18 @@
   \setcounter{problem}{0}%
   \oldactivity{#1}%
 }
+
+\let\problem\relax
+\let\endproblem\relax
+\makeatletter
+\let\c@problem\relax
+\makeatother
+\newtheoremstyle{SlantTheorem}{\topsep}{\fill}%%% space between body and thm
+ {\slshape}                      %%% Thm body font
+ {}                              %%% Indent amount (empty = no indent)
+ {\bfseries\sffamily}            %%% Thm head font
+ {}                              %%% Punctuation after thm head
+ {3ex}                           %%% Space after thm head
+ {\thmname{#1}\thmnumber{ #2}\thmnote{ \bfseries(#3)}} %%% Thm head spec
+\theoremstyle{SlantTheorem}
+\newtheorem{problem}{Problem}[]
