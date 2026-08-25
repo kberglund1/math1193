@@ -1,0 +1,173 @@
+\documentclass[noauthor,noinstructornotes]{ximera}
+
+\title{Week 1 Solutions}
+\author{Math 1193 Design Team}
+
+\begin{document}
+\begin{abstract}
+    Solutions for Week 1.
+\end{abstract}
+\maketitle
+
+\begin{problem}
+    Factor the polynomial \(x^2 - x - 6\). Compare with 
+your group and make sense of why each of your methods
+works. If you all used the same method, try to find
+a different one.
+
+Now solve the equation \(x^2 - x - 6 = 0\).
+
+\begin{instructorNotes}
+The AC method has you multiply the coefficient of the \(x^2\) and constant terms.
+In this case, \(1 \times (-6) = -6\). Now you need to find two numbers that multiply
+to \(-6\) and add to \(-1\), which is the coefficient of the \(x\) term.
+Two numbers that work are \(-3\) and \(2\). Then we can write
+\begin{align*}
+x^2 - x - 6 & = x^2 -3x + 2x - 6 \\
+& = (x^2 - 3x) + (2x - 6) \\
+& x(x - 3) + 2(x - 3) \\
+& = (x - 3)(x + 2)
+\end{align*}
+Take some time and see if you can understand why each equality is true.
+
+In the first line, since \(-1 = -3 + 2\), \(-x = -3x + 2x\) by combining like terms.
+
+In the second line, we did some grouping with parentheses.
+
+In the third line, we factored an \(x\) out of the first set of parentheses and a 2 out of the second.
+
+In the last line, we did some more complicated factoring. Notice that \((x - 3)\) is a factor of both terms, so 
+we can pull it out. We're left with \((x + 2)\).
+
+Our equation then can be rewritten as \((x - 3)(x + 2) = 0\). When two factors multiply to give you \(0\), 
+either the first factor must equal \(0\), so \(x - 3 = 0\), or the second must equal \(0\), so \(x + 2 = 0\). 
+
+Solving these two equations yields \(x = 3\) and \(x = -2\) as solutions. To check, you can plug these back into the original equation.
+\end{instructorNotes}
+\end{problem}
+
+\begin{problem}
+Factor the polynomial \(x^2 - 25\). Compare with 
+your group and make sense of why each of your methods
+works. If you all used the same method, try to find
+a different one.
+
+Now solve the equation \(x^2 - 25 = 0\).
+
+\begin{instructorNotes}
+The difference (subtraction) of squares method only works for expressions of the form \(a^2 - b^2\), but can be useful to save time. If you have
+something that looks like \(a^2 - b^2\), it factors as \((a - b)(a + b)\).
+
+Notice that \(25 = 5^2\), so our polynomial becomes \(x^2 - 5^2\). Because it's a difference of squares, it factors as \((x - 5)(x + 5)\).\
+
+Now like in the previous problem, our equation then can be rewritten as \((x - 5)(x + 5) = 0\). When two factors multiply to give you \(0\), 
+either the first factor must equal \(0\), so \(x - 5 = 0\), or the second must equal \(0\), so \(x + 5 = 0\). 
+
+Solving these two equations yields \(x = 5\) and \(x = -5\) as solutions. To check, you can plug these back into the original equation.
+
+
+\end{instructorNotes}
+\end{problem}
+
+\begin{problem}
+Solve the inequality \(-2x + 4 \ge 0\). Shade the 
+solution set on the number line, then write the 
+solution set in interval notation.
+
+\begin{instructorNotes}
+When we solve an inequality, we want to find \textbf{all} \(x\)-values that make the inequality true. For example, \(0\) is a solution 
+to the inequality (try testing it!).
+
+One solution could be
+\begin{align*}
+    -2x + 4 & \ge 0 \\
+    -2x & \ge -4 \\
+    x & \le 2
+\end{align*}
+Take some time and see if you understand each step.
+
+In the first step, we subtracted \(4\) from both sides of the inequality. 
+
+In the second, we divided by \(-2\). Notice that when we divide or multiply by a negative number on both sides of an inequality,
+the inequality changes from \(\ge\) to \(\le\). This also happens with \(\le\) to \(\ge\), \(<\) to \(>\) and \(>\) to \(<\).
+
+The number line looks like this. All numbers to the left of 2 are shaded, since \(x \le 2\). The underline on \(\le\) means that 2 itself is included
+in the solution set, so 2 is shaded with a closed dot.
+\begin{center}
+    \includegraphics[width=10cm]{number-line.png}
+\end{center}
+
+For the interval notation, 
+\end{instructorNotes}
+\end{problem}
+
+\begin{problem}
+Let's play a game (sort of)!
+
+Consider the equation \(y = 2 + 3x\). Pair up and 
+    choose one person to be Player X and the other
+    to be Player Y.
+    \begin{enumerate}
+        \item Player X comes up with 3 \(x\)-values, and 
+        Player Y comes up with 3 \(y\)-values. 
+        These can be any numbers you want, but try 
+        to keep them small so they can be plotted 
+        later.
+        \item The players exchange their numbers. 
+        Player X has to find the \(x\)-values that 
+        correspond to the \(y\)-values and put 
+        them into coordinate pairs, and Player Y 
+        has to find the \(y\)-values that 
+        correspond to the \(x\)-values and put 
+        them into coordinate pairs. 
+        
+        Whose job is easier?
+        
+        \item Write down the 6 
+        ordered pairs that satisfy the equation.
+        \item Graph your ordered pairs on the \(xy\)
+        coordinate plane.
+    \end{enumerate}
+
+
+\begin{instructorNotes}
+
+\end{instructorNotes}
+\end{problem}
+
+\begin{problem}
+Jaden was given the following problem:
+
+\textit{Let \(f(x) = x^2 + x + 1\). Find \(f(a + 2)\).}
+
+Jaden's work is as follows:
+
+\begin{align*}
+    f(a + 2) & = a + 2^2 + a + 2 + 1 \\
+    & = a + 4 + a + 3 \\
+    & = 2a + 7
+\end{align*}
+
+Is Jaden's work correct? Why or why not? Where did he 
+go wrong? What did he do correctly?
+
+\begin{instructorNotes}
+Print this out so students can annotate the work.
+\end{instructorNotes}
+\end{problem}
+
+\begin{problem}
+What are the domain and range of the function 
+whose graph is shown below? Compare your answer with
+a partner and discuss. 
+
+\begin{center}
+    \includegraphics[width=10cm]{domainRangeGraphically.png}
+\end{center}
+
+\begin{instructorNotes}
+Can be printed so students can interact with the graph.
+\end{instructorNotes}
+\end{problem}
+
+\end{document}
