@@ -28,11 +28,35 @@ Say you sell shoes at \$120 per pair.
 \end{enumerate}
 
 \begin{explanation}
-This is all about real-world examples of linear relationships,
-emphasizing the fact that if students can answer the question 
-for a concrete number, they can answer the question for 
-variables. The last parts of this question is meant to 
-get students used to function notation. 
+
+    \begin{table}[h]
+\begin{tabular}{|c|c|} \hline
+Pairs of shoes sold & Revenue (\$) \\ \hline
+0 & 0 \\
+1 & 120 \\
+2 & 240 \\
+3 & 360 \\
+32 & 3840 \\
+$x$ & $120x$ \\ \hline
+\end{tabular}
+\end{table}
+\begin{itemize}
+    \item \(R(x) = 120x\)
+    
+    Notice that when writing a function, we use function notation to indicate the independent variable (the input).
+    Another possible answer could be \(R(p) = 120p\). The important thing is that your formula should say what the input is and how to get from the input to the output.
+
+    \item 
+    \begin{center}
+    \includegraphics[width=10cm]{revenueGraph.png}
+    \end{center}
+
+    This graph is very steep.
+
+    \item The slope represents the revenue per pair of shoes sold. 
+    
+    Since slope is a change in \(y\) over a change in \(x\), it should be a change in outputs (revenue) over a change in inputs (pairs of shoes sold).
+\end{itemize}
 \end{explanation}
 
 \end{problem}
@@ -58,11 +82,39 @@ facility.
 \end{enumerate}
 
 \begin{explanation}
-This is all about real-world examples of linear relationships,
-emphasizing the fact that if students can answer the question 
-for a concrete number, they can answer the question for 
-variables. The last parts of this question is meant to 
-get students used to function notation. 
+
+\begin{table}[h]
+\begin{tabular}{|c|c|}
+    \hline
+Pairs of shoes made & Cost (\$) \\ \hline
+0 & 2000 \\
+1 & 2030 \\
+2 & 2060 \\
+3 & 2090 \\
+12 & 2360 \\
+$x$ & $30x + 2000$ \\ \hline
+\end{tabular}
+\end{table}
+\begin{itemize}
+    \item \(C(x) = 30x + 2000\)
+    
+    Notice that when writing a function, we use function notation to indicate the independent variable (the input).
+    Another possible answer could be \(C(n) = 30n + 2000\). The important thing is that your formula should say what the input is and how to get from the input to the output.
+
+    \item 
+    \begin{center}
+    \includegraphics[width=10cm]{costGraph.png}
+    \end{center}
+
+    This graph is very steep.
+
+    \item The slope represents the cost per pair of shoes sold. 
+    
+    Since slope is a change in \(y\) over a change in \(x\), it should be a change in outputs (cost) over a change in inputs (pairs of shoes sold).
+
+    If you already know about the formulas of lines, you can note that the slope is 30, and has nothing to do with the 2000. Since slope only measures a rate of change,
+    and the 2000 is a fixed cost, this makes sense.
+\end{itemize}
 \end{explanation}
 
 
@@ -83,7 +135,19 @@ Consider the function \(f(x) = \frac{1}{2}x + 5\).
 \end{enumerate}
 
 \begin{explanation}
-This is meant to draw on students' creativity. We'll see how that goes.
+Here's one possibility:
+
+\begin{enumerate}
+    \item You and your kid brother are running a lemonade stand. You start the day with \$5 in cash on hand and sell each glass of lemonade for \$0.50.
+    
+    Write down a function \(f\) whose input is the number of glasses sold and whose output is the amount of cash you have on hand.
+
+    \item The \(x\)-intercept is \((-10, 0)\). In this context, that means that if you sell \(-10\) glasses of lemonade, you'll have \$0 in cash on hand. Not a super relevant scenario.
+    
+    The \(y\)-intercept is \((0, 5)\). In this context, if you sell 0 glasses of lemonade, you have \$5 on hand. You could also think about this as the amount of cash you start with.
+
+    \item The slope of \(f\) is \(\frac{1}{2}\). In this case, the slope is the revenue per glass of lemonade sold.
+\end{enumerate}
 \end{explanation}
 \end{problem}
 
@@ -98,7 +162,46 @@ Say \(f(x) = 2x - g(x)\) and \(g(x) = 5 + x\).
 \end{enumerate}
 
 \begin{explanation}
-This is meant to gauge familiarity with substitution and function notation.
+    First, it's helpful to find a formula for \(f(x)\) that does not involve \(g(x)\). 
+    \begin{align*}
+        f(x) & = 2x - g(x) \\
+        & = 2x - (5 + x) \\
+        & = 2x - 5 - x \\
+        & = x - 5
+    \end{align*}
+    Notice that when substituting the expression for \(g(x)\), we used parentheses. Often, those parentheses don't matter when substituting, but 
+    in this case, they do! This is because of the negative sign, which must be distributed to both the 5 and the \(x\). 
+\begin{enumerate}
+    \item The slope of \(f\) is 1. If you know that the coefficient of the \(x\) term in a linear function is the slope, that's great!
+    
+    If not, you could always do 
+    \begin{align*}
+        \frac{\text{change in }y}{\text{change in }x} & = \frac{y_2 - y_1}{x_2 - x_1} \\
+        & = \frac{f(x_2) = f(x_1)}{x_2 - x_1} \\
+        & = \frac{f(1) - f(0)}{1 - 0} \\
+        & = \frac{-4 - (-5)}{1} \\
+        & = \frac{1}{1} \\
+        & = 1
+    \end{align*}
+
+    We chose \(x_2 = 1\) and \(x_1 = 0\) just so the denominator works out nicely.
+    
+    \item Again, if you know that the \(y\)-intercept of a linear function corresponds to the constant term, that's great! You can then immediately tell it's \((0, -5)\)
+    
+    If not, remember that the \(y\)-intercept of any function is \((0, f(0))\), that is, you plug in 0 for \(x\). Since \(f(0) = -5\), we get \((0, -5)\).
+
+    \item \(f(2) = 2 - 5 = 3\). Remember that the number inside the parentheses in \(f(2)\) represents the \(x\)-value we're plugging into our formula.
+    
+    \item \begin{center}
+    \includegraphics[width=10cm]{costGraph.png}
+    \end{center}
+
+    Again, you could use what you know about linear functions to graph this. You know the \(y\)-intercept is \((0, -5)\) and you know the slope is 1, so you can go up 1 and over 1
+    and connect your dots. 
+
+    However, you can also do this just by plugging in test \(x\)-values and seeing what you get. 
+
+\end{enumerate}
 \end{explanation}
 \end{problem}
 
