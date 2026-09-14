@@ -1,0 +1,210 @@
+\documentclass[noauthor]{ximera}
+
+\title{Week 3}
+\author{Math 1193 Design Team}
+
+\begin{document}
+\begin{abstract}
+    Solutions for Week 3.
+\end{abstract}
+\maketitle
+
+\begin{problem}
+Solve \(4x - 5y = 10\) for \(x\). Now solve it for \(y\).
+
+\begin{explanation}
+When we say solve an equation for \(x\), we mean isolate \(x\) on one side.
+
+Here's some work:
+\begin{align*}
+    4x - 5y & = 10 \\
+    4x & = 10 - 5y \\
+    x & = \frac{10 - 5y}{4} \\
+    x & = -\frac{5}{4}y + \frac{5}{2}
+\end{align*}
+
+The last line is not strictly necessary, but may be a nicer way to write it.
+
+Solving for \(y\):
+\begin{align*}
+    4x - 5y & = 10 \\
+    -5y & = 10 - 4x \\
+    y & = \frac{10 -4x}{-5} \\
+    y & = 2 + \frac{4}{5}x
+\end{align*}
+\end{explanation}
+\end{problem}
+
+\begin{problem}
+Solve \(0.01x + 0.5y = 1\) for \(x\). Now solve it for \(y\).
+Share with a group how you solved the equation. See if you can come up with more ways. Can you use fractions? Whole numbers?
+
+\begin{explanation}
+When we say solve an equation for \(x\), we mean isolate \(x\) on one side.
+
+Here's some work:
+\begin{align*}
+    0.01x + 0.5y & = 1 \\
+    0.01x & = 1 - 0.5y \\
+    x & = \frac{1 - 0.5y}{0.01}
+\end{align*}
+
+We could also convert everything to fractions:
+\begin{align*}
+    \frac{x}{100} + \frac{y}{2} & = 1 \\
+    100\left(\frac{x}{100} + \frac{y}{2}\right) & = 100 \cdot 1 \\
+    x + 50y & = 100 \\
+    x = 100 - 50y
+\end{align*}
+
+Decimals are similar.
+
+Solving for \(y\):
+\begin{align*}
+    0.01x + 0.5y & = 1 \\
+    0.5y & = 1 - 0.01x \\
+    y & = \frac{1 -0.01x}{0.5} \\
+    y & = \frac{1}{0.5} - \frac{0.01x}{0.5} \\
+    y & = \frac{1}{1/2} - \frac{x/100}{1/2} \\
+    y & = 1 \cdot \frac{2}{1} - \frac{x}{100}\cdot \frac{2}{1} \\
+    y & = 2 - \frac{x}{50}
+\end{align*}
+
+You should be comfortable working with decimals, fractions, and converting between them.
+\end{explanation}
+\end{problem}
+
+\begin{problem}
+Let \(2a + b = 23\) and \(a = -b + 1\). 
+\begin{enumerate}
+    \item Rewrite the first equation in terms of \(b\). That is, rewrite it so no terms contain the variable \(a\).
+    \item Rewrite the second equation in terms of \(a\). That is, rewrite it so no terms contain the variable \(b\).
+\end{enumerate}
+
+\begin{explanation}
+    \begin{enumerate}
+        \item Since \(a = -b + 1\), we can substitute into the first equation:
+        \begin{align*}
+            2(-b + 1) + b & = 23 \\
+            -2b + 2 + b & = 23 \\
+            -b + 2 & = 23 \\
+            -b & = 21 \\
+            b & = -21
+        \end{align*}
+        \item Now, from the first equation, \(b = 23 - 2a\). Substituting, we find that
+        \begin{align*}
+            a & = -(23 - 2a) + 1 \\
+            a & = -23 + 2a + 1 \\
+            a & = -22 + 2a \\
+            a - 2a & = -22 \\
+            -a & = -22 \\
+            a & = 22
+        \end{align*}
+    \end{enumerate}
+\end{explanation}
+\end{problem}
+
+\begin{problem}
+\begin{enumerate}
+    \item Graph the equations \(x + y = 2\) and \(x + y = 3\)
+    without a calculator. Do these lines ever touch? Why or why not?
+    Can you find an \(x\) and a \(y\) that satisfy both equations at 
+    the same time? Why or why not? 
+    \item Graph the equations \(x + y = 2\) and \(x - y = 3\)
+    without a calculator. Do these lines ever touch? Why or why not?
+    Can you find an \(x\) and a \(y\) that satisfy both equations at 
+    the same time? Why or why not? 
+    \item Is it possible for two lines in the 
+    plane to touch more than once? Debate with a friend.
+\end{enumerate}
+
+\begin{explanation}
+\begin{enumerate}
+    \item Notice that the two equations are not in slope-intercept (\(y = mx + b\)) form, so one approach is to rearrange them into 
+    that form: \(y = - x + 2\) and \(y = - x + 3\). Now you can see that these are lines with slope \(-1\) and \(y\)-intercepts 2 and 3, respectively.
+
+    \begin{center}
+    \includegraphics[width=10cm]{parallelLines.png}
+    \end{center}
+
+    From their graphs, these lines are parallel, so they do not ever touch.
+
+    There are a few ways to think about the problem of finding an \(x\) and \(y\) that satisfy both equations at the same time. 
+    
+    Graphically, since the two lines don't intersect, there isn't an \((x, y)\) pair that lies on both of the graphs. But \((x, y)\) pairs
+    are only on the graphs if they satisfy the equations and vice versa. Therefore, no \(x\) and \(y\) can satisfy both equations at the same time.
+
+    You can also think about this by substituting. Since any \(y\) that satisfies both equations has to equal both \(-x + 2\) and \(-x + 3\) at the same time,
+    by the transitive property of equality, \(-x + 2 = -x + 3\). Canceling the \(-x\), we arrive at the conclusion that \(2 = 3\), which
+    can't be true. Therefore, no such \(y\) exists.
+
+    \item Notice that the two equations are not in slope-intercept (\(y = mx + b\)) form, so one approach is to rearrange them into 
+    that form: \(y = - x + 2\) and \(y = x - 3\). Now you can see that these are lines with slope \(-1\) and \(1\) and \(y\)-intercepts 2 and 3, respectively.
+
+    \begin{center}
+    \includegraphics[width=10cm]{perpLines.png}
+    \end{center}
+
+    From their graphs, these lines are not paralle, so they will touch. In fact, they're perpendicular, so they cross at a right angle.
+
+    There are a few ways to think about the problem of finding an \(x\) and \(y\) that satisfy both equations at the same time. 
+    
+    Graphically, since the two lines intersect, there's an \((x, y)\) pair that lies on both of the graphs. But \((x, y)\) pairs
+    are only on the graphs if they satisfy the equations and vice versa. Therefore, some \(x\) and \(y\) can satisfy both equations at the same time.
+
+    You can also think about this by substituting. Since any \(y\) that satisfies both equations has to equal both \(-x + 2\) and \(x - 3\) at the same time,
+    by the transitive property of equality, \(-x + 2 = x - 3\). Solving this equation gives us \(x = \frac{5}{2}\). Plugging into one of the original
+    equations, we see that \(y = \frac{5}{2} - 3\), or \(y = -\frac{1}{2}\). This means that \(\left(\frac{5}{2}, -\frac{1}{2}\right)\) is
+    an \((x, y)\) pair that satisfies both equations at the same time.
+
+    \item 
+\end{enumerate}
+\end{explanation}
+\end{problem}
+
+\begin{problem}
+Your second-favorite music artist is playing at a concert venue. There are two types of tickets. VIP seating costs \$100, and general admission costs \$40. 
+Ticket sales totaled \$53,000. Your friend who works at the venue tells you they sold 50 VIP seats.
+
+How many general admission tickets were sold?
+\end{problem}
+
+
+\begin{problem}
+Leo has a solution that is 2\% bleach by volume (that is, for every 100mL, 2mL is bleach and 98mL is water). He also has one that is 5\% bleach by volume. 
+
+How much of each solution (in mL) should Leo use if he wants to make 500mL of a 4\% bleach solution?
+
+\begin{enumerate}
+    \item Define variables that help you solve this 
+    problem. Be specific about what quantities the variables
+    represent. Compare with a friend and discuss why you made 
+    the choices you made.
+    \item Write equations that relate the variables you 
+    have defined.
+\end{enumerate}
+
+%begin{problem}
+%A theater charges \$50 per ticket for seats in Section A, 
+%\$30 per ticket for seats in Section B, and \$20 per ticket 
+%for seats in Section C. For one play, 4000 tickets were sold 
+%for a total of \$120,000 in revenue. 
+
+%\begin{enumerate}
+%    \item If 1000 more tickets in Section B were sold 
+%    than the other two tickets combined, how many tickets 
+%    in each section were sold?
+%    \item Define variables that help you solve this 
+%    problem. Be specific about what quantities the variables
+%    represent. Compare with a friend and discuss why you made 
+%    the choices you made.
+%    \item Write equations that relate the variables you 
+%    have defined.
+%\end{enumerate}
+
+\begin{explanation}
+Closely mirrors 1148 exam-type questions with a bit more scaffolding.
+\end{explanation}
+\end{problem}
+
+\end{document}
