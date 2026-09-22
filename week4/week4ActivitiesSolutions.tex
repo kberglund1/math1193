@@ -32,7 +32,10 @@ compare with your group. Are there any cells you cannot fill in?
 \end{center}
 
 \begin{explanation}
+For the \(3f(x)\) column, we're multiplying all \(f(x)\) values by 3.
 
+For the \(f(3x)\) column, we're calculating \(3x\), then seeing which value in the second column corresponds to that input. Notice that a few cells are blank,
+since \(f(-9)\) and \(f(9)\) are not defined in the table.
 \end{explanation}
 \end{problem}
 
@@ -52,11 +55,18 @@ compare with your group. Are there any cells you cannot fill in?
  3 & 4 & 3 & 6 \\
  \hline
  4 & 9 & 8 & 4 \\
- \hlin
+ \hline
  5 & -1 & -2 & 9 \\
  \hline
 \end{tabular}
 \end{center}
+
+\begin{explanation}
+    For the \(f(x)-1\) column, we're subtracting 1 from all \(f(x)\) values.
+
+For the \(f(x - 1)\) column, we're calculating \(x - 1\), then seeing which value in the second column corresponds to that input. Notice that one cell
+is blank, since \(f(0)\) is not defined in the table.
+\end{explanation}
 \end{problem}
 
 \begin{problem}
@@ -80,6 +90,13 @@ compare with your group. Are there any cells you cannot fill in?
  \hline
 \end{tabular}
 \end{center}
+
+\begin{explanation}
+    For the \(-f(x)\) column, we're multiplying all \(f(x)\) values by \(-1\).
+
+For the \(f(-x)\) column, we're calculating \(-x\), then seeing which value in the second column corresponds to that input.
+\end{explanation}
+
 \end{problem}
 
 \begin{problem}
@@ -98,15 +115,15 @@ the graph of function \(f\).
         \hline
         \(x\) & \(f(x)\) & \(g(x)\) & \(h(x) = f(x) - 2.5\) \\
         \hline\hline
-        -4 & 0 &  &  \\ 
+        -4 & 0 & 4 & -2.5 \\ 
         \hline
-        -3 & -5.8 &  &  \\
+        -3 & -5.8 & -1.8 & -8.3 \\
         \hline
-        -0.7 & 0 &  &  \\
+        -0.7 & 0 & 4 & -2.5 \\
         \hline
-        1.2 & -3.3 &  &  \\
+        1.2 & -3.3 & 0.7 & -5.8 \\
         \hline
-        2 & 0 &  &  \\
+        2 & 0 & 4 & -2.5 \\
         \hline
         \end{tabular}
     \end{center}
@@ -118,6 +135,15 @@ the graph of function \(f\).
     \(h(x) = f(x) - 2.5\). Complete the \(h(x)\) column of the 
     table.
 \end{enumerate}
+
+\begin{explanation}
+    \begin{enumerate}
+        \item Since \(f(-4) = 0\) and \(g(-4) = 4\), we know that the graph is shifted up by 4 units. This upward shift corresponds to adding 4 to each \(y\)-coordinate.
+        \item Since every \(y\)-coordinate on the graph of \(g\) is 4 more than the \(y\)-coordinate on the graph of \(f\), \(g(0) = f(0) + 4 = -0.86 + 4 = 3.14\).
+        \item \(g(x) = f(x) + 4\)
+        \item Here, we subtract 2.5 from each \(f(x)\) value.
+    \end{enumerate}
+\end{explanation}
 \end{problem}
 
 \begin{problem}
@@ -136,8 +162,15 @@ difficult to write down concisely.
 \end{enumerate}
 
 \begin{explanation}
-Use this as an opportunity to gauge comfort with linear functions.
+One way to do this is to graph each line, then erase the points whose \(x\)-coordinates don't satisfy the inequality. Remember to use open and closed dots to represent 
+the function's actual value at \(-5\), \(-1\), \(2\), and \(4\).
+
+\begin{center}
+    \includegraphics[width=10cm]{piecewise.png}
+    \end{center}
 \end{explanation}
 \end{problem}
+
+Since the graph passes the vertical line test (each input has only one output/each \(x\)-value has only one \(y\)-value), this the graph of a function.
 
 \end{document}
