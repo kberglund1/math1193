@@ -1,0 +1,321 @@
+\documentclass[noauthor]{ximera}
+
+\title{Week 6}
+\author{Math 1193 Design Team}
+
+\begin{document}
+\begin{abstract}
+    Solutions for Week 6.
+\end{abstract}
+\maketitle
+
+\begin{problem}
+Look over the following table classifying expressions.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|} 
+ \hline
+ Expression & Polynomial? & Degree & Leading Coefficient \\
+ \hline\hline
+ \(x\) & Yes & 1 & 1 \\ 
+ \hline
+ \(3x^2\) & Yes & 2 & 3 \\
+ \hline
+ \(7x + x^{1/2}\) & No & N/A & N/A \\
+ \hline
+ \(2x^3 - x^2 + x - 4\) & Yes & 3 & 2 \\
+ \hline
+ \(\pi x^2 - 9\) & Yes & 2 & \(\pi\) \\
+ \hline
+ \(\frac{2}{3}x^5 + \frac{9}{7}x\) & Yes & 5 & \(\frac{2}{3}\) \\
+ \hline
+ \(\frac{2x^5 + 9x}{3x^5 - 7x}\) & No & N/A & N/A \\
+ \hline
+ \(x^\pi - 2\) & No & N/A & N/A \\
+ \hline
+ \(2^x + 2^x + 1\) & No & N/A & N/A \\
+ \hline
+ \((2 - x)(x + 1)\) & Yes & 2 & \(-1\) \\
+ \hline
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+    \item Come up with a definition of a polynomial. Reviewing the
+    definition of a quadratic may help you. Check with your group
+    and the instructor to confirm.
+    \item Identify all of the following which are polynomials 
+    and give their degree and leading coefficient.
+    \begin{enumerate}
+        \item \(f\left(x\right)=2x^3-x+1\)
+	    \item \(g\left(x\right)=2x^\pi-x+1\)
+	    \item \(h\left(x\right)=7-x\)
+	    \item \(f\left(x\right)=x\)
+	    \item \(g\left(x\right)=\left(x-17\right)\left(x+8\right)\)
+	    \item \(h\left(x\right)=\left(2x-3\right)^5\left(x-1\right)^2\)
+	    \item \(f\left(x\right)= e x^5-3\)
+	    \item \(g\left(x\right)=\frac{x-1}{x+1}\)
+	    \item \(h\left(x\right)=7x^6-2x+x^6\)
+	    \item \(f\left(x\right)=1+x+x^2\)
+	    \item \(g\left(x\right)=-3\left(x-\frac{1}{2}\right)^2+4\)
+	    \item \(h\left(x\right)=\left(x^2+1\right)\left(x-1\right)\left(x+1\right)^2\)
+	    \item \(f\left(x\right)=\left(-3x+2\right)\left(5x+1\right)\left(2x-2\right)^2\) 
+    \end{enumerate}
+\end{enumerate}
+
+\begin{explanation}
+\begin{enumerate}
+    \item Here's the definition from the College Algebra textbook.
+    
+    ``Let \(n\) be a whole number and \(a_n\), \(a_{n - 1}\), \(a_{n - 2}\), \(\ldots\), \(a_1\), \(a_0\) be real numbers,
+    where \(a_n \ne 0\). Then a function defined by 
+    $$
+    f(x) = a_nx^n + a_{n - 1}x^{n - 1} + a_{n - 2}x^{n-2} + \cdots + a_1 x + a_0
+    $$
+    is called a \textbf{polynomial function of degree \(n\)}.''
+
+    This is a kind of technical-looking definition. Another way of thinking of polynomials is that polynomials are all the expressions you get from
+    taking whole number powers of \(x\), multiplying by real numbers, then adding them. The highest exponent that appears is called the degree of the polynomial. 
+
+    Notice that we'll say 0 and 1 are whole numbers, so \(x^1\), which we usually write as \(x\) is a polynomial. Same with \(x^0\), which we usually write as 1.
+
+    Notice that when you multiply polynomials, you get another polynomial, since you can always rewrite in the above form.
+
+    \item 
+    \begin{enumerate}
+        \item \(2x^3 - x + 1\) is a polynomial of degree 3. The leadning coefficient is the coefficient attached to the highest power of \(x\), which in this case is 2.
+        \item \(2x^\pi - x + 1\) is not a polynomial. The exponents on \(x\) must all be whole numbers, and \(\pi\) is not a whole number.
+        \item \(7 - x\) is a polynomial. Since the highest power of \(x\) that appears is \(x\), which we can rewrite as \(x^1\), its degree is 1 and its leading coefficient is \(-1\). Notice that 
+        the order in which we write the terms does not matter, since addition's order does not matter.
+        \item \(x\) is a polynomial of degree 1 with leading coefficient 1.
+        \item \((x - 17)(x + 8)\) is a polynomial, since we can multiply the two factors to obtain something that is a sum of whole number powers of \(x\) with real 
+        number coefficients (try it!). When you do this, you'll see that the degree is 2 and leading coefficient is 1.
+        \item \((2x - 3)^5(x - 1)^2\) is a polynomial, since exponentiation is repeated multiplication, and multiplication of two polynomials results in a polynomial.
+        
+        However, the degree and leading coefficient are a bit more difficult to find. You could do all the multiplications, but that would take a while.
+        
+        Instead, consider the following. It's a long digression, but it may be useful.
+        
+        When we multiply something like \((x - 1)(x + 2)\), we do what's sometimes called FOILing. We multiply the first terms, \(x \cdot x = x^2\),
+        then the outer terms, \(x \cdot 2 = 2x\), then the inner terms, \(-1 \cdot x = -x\), and finally the last terms, \(-1 \cdot 2 = -2\), then add them together,
+        \(x^2 + 2x + (-x) + (-2) = x^2 + x - 2\).
+
+        Although FOIL is a helpful way to remember this, this is a consequence of the distributive property.
+        \begin{align*}
+            (x - 1)(x + 2) & = (x - 1)x + (x - 1)2 \\
+            & = x(x - 1) + 2(x - 1) \\
+            & = x^2 - x + 2x - 2 \\
+            & = x^2 + x - 2. 
+        \end{align*}
+        
+        Another way to describe what's going on is that we're choosing one term from each set of parentheses and multiplying them, then doing the same for all possible
+        choices, and finally adding our results, collecting like terms if need be.
+
+        This works for other multiplication of polynomials as well! For example, \((x - 1)(x^2 + 2x + 1)\) cannot be done using FOIL (the \(2x\) in the second factor 
+        isn't first, outer, inner, or last). Instead, we multiply the \(x\) in the first factor by \(x^2\), then \(2x\), then \(1\), then multiply the \(-1\) in the
+        first factor by \(x^2\), then \(2x\), then \(1\). Notice how every possible choice of terms from each set of parentheses was multiplied together.
+
+        Similarly, you can't do \((4x + 1)(x + 2)(x + 3)\) all at once with FOIL (what's the inner term of \((x + 2)\)?). You'd have to FOIL the first two factors, then 
+        multiply by the last as shown above. 
+
+        However, we can get information about the degree and leading coefficient without multiplying out the whole polynomial. Since the degree is the \textbf{highest}
+        power of \(x\), the only choice of terms from each set of parentheses that gives you the highest power of \(x\) will be the highest power term in each set
+        of parentheses. In the example of \((4x + 1)(x + 2)(x + 3)\), if we take the highest power term from each set of parentheses, we get \(4x \cdot x \cdot x = x^3\).
+        No other choice gets you any power higher than \(x^2\). Therefore, \((4x + 1)(x + 2)(x + 3) = 4x^3 + \cdots\), where there aren't any other terms with an \(x^3\)
+        in them. Thus, we know for sure that the degee of \((4x + 1)(x + 2)(x + 3)\) is 3 and its leading coefficient is 4.
+
+        In the problem, we could rewrite \(2x - 3)^5(x - 1)^2\) as \((2x - 3)(2x - 3)(2x - 3)(2x - 3)(2x - 3)(x - 1)(x - 1)\) and choose the highest power 
+        of \(x\) from each set of parentheses: \(2x \cdot 2x \cdot 2x \cdot 2x \cdot 2x \cdot x \cdot x = (2x)^5\cdot x^2 = 32x^7\). Since this is guaranteed
+        to be the term with the highest power of \(x\), we know that the degree is 7 and the leading coefficient is 32.
+
+        \item \(ex^5 - 3\) is a polynomial of degree 5 and leading coefficient \(e\). \(e\) is a very important real number constant you'll learn about later in this semester.
+        
+        \item \(\frac{x - 1}{x + 1}\) is not a polynomial. The quotient of two polynomials is not a polynomial.
+        \item \(7x^6 - 2x + x^6\) is a polynomial. It can be rewritten as \(8x^6 - 2x\), so it is of degree 6 and has leading coefficient 8.
+        \item \(1 + x + x^2\) is a polynomial of degree 2 and leading coefficient 1. Notice that the order of terms again does not matter when finding degree and leading coefficient.
+        \item \(-3\left(x - \frac{1}{2}\right) + 4\) is a polynomial. This is the vertex form of a quadratic, which is a degree 2 polynomial. After we FOIL the 
+        \(\left(x - \frac{1}{2}\right)^2\), we get an \(x^2\) term, then multiplying by \(-3\) gives us a leading coefficient of \(-3\).
+        \item \((x^2 + 1)(x - 1)(x + 1)^2\) is a polynomial. Multiplying the leading terms of the factors gives us \(x^2 \cdot x \cdot x^2 = x^5\), so the degree is 5
+        and the leading coefficient is 1.
+        \item \((-3x + 2)(5x + 1)(2x - 2)^2\) is a polynomial. Multiplying the leading terms of the factors gives us \(-3x \cdot 5x \cdot (2x^2) = -60x^4\), so the degree is 4
+        and the leading coefficient is \(-60\).
+        
+
+    \end{enumerate}
+\end{enumerate}
+\end{explanation}
+\end{problem}
+
+\begin{problem}
+Solve the following polynomial equations.
+
+\begin{enumerate}
+    \item \((x - 1)(x + 2) = 0\)
+    \item \((x - 1)^2(x + 2) = 0\)
+    \item \(-3(x - 1)^2(x + 2) = 0\)
+    \item \((2x - 1)^3(x + 1) = 0\)
+    \item \(2x^3 + 8x^2 + 3x + 12 = 0\)
+    \item \(2x^2 + 7x + 3 = 0\)
+\end{enumerate}
+
+How could you check your answers? 
+
+Which equations were most difficult to solve?
+
+\begin{explanation}
+Remember that solving an equation means that we're finding which numbers, when plugged into the equation, make the equation true.
+
+When numbers multiply to be 0, at least one of them has to be 0. Because of this, when setting expressions equal to 0 and solving,
+we can set each factor equal to 0 and solve to obtain the solutions.
+    \begin{enumerate}
+        \item We set each factor equal to 0: \(x - 1 = 0\) and \(x + 2 = 0\), yielding \(x = -2, 1\).
+        \item Again, we set each factor equal to 0: \(x - 1 = 0\), \(x - 1 = 0\), and \(x + 2 = 0\), yielding \(x = -2, 1\). The first two equations give the same solution.
+        \item Same here: \(-3 = 0\), \(x - 1 = 0\), \(x - 1 = 0\), and \(x + 2 = 0\). The first equation is never true, so it doesn't give a solution. Therefore,
+        the solutions are \(x = -2, 1\).
+        \item Again: \(2x - 1 = 0\) and \(x + 1 = 0\), so \(x = \frac{1}{2}, -1\). Note that the power of 3 adds no solutions.
+        \item The right-hand side of the equation isn't factored, so let's factor using grouping.
+        \begin{align*}
+            2x^3 + 8x^2 + 3x + 12 & = (2x^3 + 8x^2) + (3x + 12) \\
+            & = 2x^2(x + 4) + 3(x + 4) \\
+            & = (x + 4)(2x^2 + 3),
+        \end{align*}
+        so our equation becomes \((x + 4)(2x^2 + 3) = 0\). Setting each factor equal to 0 gives \(x + 4 = 0\) and \(2x^2 + 3 = 0\). The first equation gives \(x = -4\), but
+        the second gives no solution: the quadratic \(2x^2 + 3\) has a minimum value of 3. Alternatively, you could do the algebra:
+        \begin{align*}
+            2x^2 + 3 & = 0 \\
+            2x^2 & = -3 \\
+            x^2 & = -\frac{3}{2},
+        \end{align*}
+        and a square can never be negative.
+
+        \item More factoring! Notice that
+        \begin{align*}
+            2x^2 + 7x + 3 & = 2x^2 + 6x + x + 3 \\
+            & = (2x^2 + 6x) + (x + 3) \\
+            & = 2x(x + 3) + 1(x + 3) \\
+            & = (x + 3)(2x + 1),
+        \end{align*}
+        so we can set each factor equal to 0 to solve our original equation. \(x + 3 = 0\) and \(2x + 1 = 0\), so \(x = -3, -\frac{1}{2}\).
+    \end{enumerate}
+
+To check your answers when solving any equation, plug them into the original equation, then see if the equation is true.
+
+The last two problems were the more difficult ones. It turns out that in standard form, it's hard to find zeros, but in factored form, the process becomes easier.
+\end{explanation}
+\end{problem}
+
+\begin{problem}
+Ella is working on some math homework and decides to graph the 
+function 
+\(f\left(x\right)=\left(x-2\right)\left(x+3\right)\left(x-5\right)\left(x+15\right)\) 
+on her calculator to get a sense of what the graph looks like. Her 
+viewing window on the graphing calculator is set to \([-10,10]\) by \([-10,10]\). 
+
+\begin{enumerate}
+    \item How many \(x\)-intercepts will Ella see with this viewing window?
+    \item How many \(x\)-intercepts does \(f\) have?
+    \item What viewing window would you use?
+\end{enumerate}
+
+\begin{explanation}
+Remember that \(x\)-intercepts correspond to solutions to the equation \(f(x) = 0\). 
+Solving \((x - 2)(x + 3)(x - 5)(x + 15) = 0\), we find \(x = -15, -3, 2, 5\).
+\begin{enumerate}
+    \item She will see 3 \(x\)-intercepts.
+    \item The graph of \(f\) has 4 \(x\)-intercepts.
+    \item I would use \([-20, -20]\) by \([-10, 10]\).
+\end{enumerate}
+\end{explanation}
+\end{problem}
+
+\begin{problem}
+Consider the following graph of the function \(f\).
+
+\begin{center}
+    \includegraphics[width=10cm]{endBehaviorLinear.png}
+\end{center}
+
+\begin{enumerate}
+    \item Write a sentence describing what happens to \(f\left(x\right)\) 
+    as \(x\) gets bigger and bigger in the positive direction. 
+    Remember that \(f(x)\) is the \(y\)-value associated with \(x\). 
+    An example sentence might be ``As \(x\) gets bigger and bigger in 
+    the positive direction, \(f(x)\) gets...''.
+    \item Write a sentence describing what happens to \(f\left(x\right)\) 
+    as \(x\) gets bigger and bigger in the negative direction. 
+\end{enumerate}
+\begin{explanation}
+    \begin{enumerate}
+        \item As \(x\) gets bigger and bigger in the positive direction, \(f(x)\) gets bigger and bigger in the positive direction.
+        \item As \(x\) gets bigger and bigger in the negative direction, \(f(x)\) gets bigger and bigger in the negative direction.
+    \end{enumerate}
+\end{explanation}
+\end{problem}
+
+\begin{problem}
+Consider the following graph of the function \(f\).
+
+\begin{center}
+    \includegraphics[width=10cm]{endBehaviorQuadratic.png}
+\end{center}
+
+\begin{enumerate}
+    \item Write a sentence describing what happens to \(f\left(x\right)\) 
+    as \(x\) gets bigger and bigger in the positive direction. 
+    Remember that \(f(x)\) is the \(y\)-value associated with \(x\). 
+    An example sentence might be ``As \(x\) gets bigger and bigger in 
+    the positive direction, \(f(x)\) gets...''.
+    \item Write a sentence describing what happens to \(f\left(x\right)\) 
+    as \(x\) gets bigger and bigger in the negative direction. 
+\end{enumerate}
+
+\begin{explanation}
+    \begin{enumerate}
+        \item As \(x\) gets bigger and bigger in the positive direction, \(f(x)\) gets bigger and bigger in the positive direction.
+        \item As \(x\) gets bigger and bigger in the negative direction, \(f(x)\) gets bigger and bigger in the positive direction.
+    \end{enumerate}
+\end{explanation}
+\end{problem}
+
+\begin{problem}
+Consider the polynomial \(g\left(x\right)=2x^5-5x^4-30x^3+5x^2+88x+60\).
+
+\begin{enumerate}
+    \item Identify the degree of the polynomial.
+    \item Which of the 6 terms, \(2x^5\), \(5x^4\), \(30x^3\), \(5x^2\),
+    \(88x\), or \(60\), is greatest when:
+    \begin{enumerate}
+        \item \(x = 0\)
+        \item \(x = 1\)
+        \item \(x = 3\)
+        \item \(x = 5\)
+    \end{enumerate}
+    \item Write a sentence describing what happens to \(g\left(x\right)\) 
+    as \(x\) gets bigger and bigger in the positive direction. 
+    Remember that \(g(x)\) is the \(y\)-value associated with \(x\). 
+    An example sentence might be ``As \(x\) gets bigger and bigger in 
+    the positive direction, \(g(x)\) gets...''.
+    \item Write a sentence describing what happens to \(g\left(x\right)\) 
+    as \(x\) gets bigger and bigger in the negative direction. 
+\end{enumerate}
+\begin{explanation}
+    \begin{enumerate}
+        \item The polynomial is degree 5.
+        \item This asks you to plug in each \(x\) value to each term and compare them.
+        \begin{enumerate}
+            \item 60
+            \item \(88x\)
+            \item \(30x^3\)
+            \item \(2x^5\)
+        \end{enumerate}
+        \item As \(x\) gets bigger and bigger in the positive direction, \(g(x)\) gets bigger and bigger in the positive direction.
+        \item As \(x\) gets bigger and bigger in the negative direction, \(g(x)\) gets bigger and bigger in the negative direction.
+        
+    \end{enumerate}
+
+    Notice that for the last two parts, you can graph the function. 
+
+\end{explanation}
+\end{problem}
+
+\end{document}
