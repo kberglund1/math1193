@@ -29,8 +29,13 @@ with using exponent rules?
 \begin{enumerate}
 \item \(2^2 \cdot 3 \cdot 5 = 60\)
 \item \(\frac{(2\cdot 3 \cdot 5)^2}{15} = \frac{2^2 \cdot 3^2 \cdot 5^2}{3 \cdot 5} = 2^2 \cdot 3 \cdot 5 = 60\).
-\item 
+\item \((60^2)^{1/2} = 60^1 = 60\)
+\item \(2\cdot 3\cdot 5\cdot 2 = 2^2 \cdot 3 \cdot 5 = 60\)
+\item \(\frac{4\cdot 5}{3^{-1}} = 2^2 \cdot 3 \cdot 5 = 60\)
+\item \(\frac{2 + 2^2 \cdot 3 \cdot 5}{2} = 1 + 2 \cdot 3 \cdot 5 = 31\)
 \end{enumerate}
+
+
 \end{explanation}
 
 \end{problem}
@@ -50,6 +55,27 @@ with using exponent rules?
     \item What is happening as \(x \to \infty\)? That is, as you plug
     bigger and bigger \(x\)-values into \(f\), what happens to the \(y\)-values?
 \end{enumerate}
+
+\begin{explanation}
+\begin{enumerate}
+    \item \(\left(\frac{1}{3}\right)^0 = 1\)
+    \item \(\left(\frac{1}{3}\right)^1 = \frac{1}{3}\)
+    \item \(\left(\frac{1}{3}\right)^{-1} = \frac{1^{-1}}{3^{-1}} = \frac{3}{1} = 3\)
+    \item \(\left(\frac{1}{3}\right)^2 = \(\left(\frac{1}{3}\right) \cdot \(\left(\frac{1}{3}\right) = \frac{1}{9}\)
+    \item No. Since exponentiation by an integer is repeated multiplication/division and multiplying/dividing positive numbers
+    gives you a positive number, integer powers of \(\frac{1}{3}\) will never be negative. \(n\)th roots of positive numbers are also
+    never negative, so \(\left(\frac{1}{3}\right)^{1/n} = \sqrt[n]{\frac{1}{3}}\) will never be negative if \(n\) is an integer. This means that
+    rational powers of \(\frac{1}{3}\) are never negative. Irrational powers are more difficult, but these are also never negative.
+    \item 
+        \begin{center}
+        \includegraphics[width=10cm]{expDecay.png}
+        \end{center}
+    \item The graph decreases, but has a horizontal asymptote at \(y = 0\) that it approaches as \(x \to \infty\).
+    \item Domain: \((-\infty, \infty)\), Range: \((0, \infty)\)
+    \item \(f(x)\) will never equal zero for the same reason it will never be negative.
+    \item As \(x \to \infty\), \(f(x) \to 0\).
+\end{enumerate}
+\end{explanation}
 \end{problem}
 
 \begin{problem}
@@ -59,6 +85,15 @@ with using exponent rules?
     \item Find the \(y\)-intercept of the function defined by \(f\left(x\right)=\frac{1}{2}\cdot 7^x\).
     \item For a positive \(b\), find the \(y\)-intercept of the function defined by \(f\left(x\right)=a\cdot b^x\).
 \end{enumerate}
+
+\begin{explanation}
+\begin{enumerate}
+    \item \((0, 1)\)
+    \item \((0, 2)\)
+    \item \((0, 1/2)\)
+    \item \((0, a)\)
+\end{enumerate}
+\end{explanation}
 \end{problem}
 
 \begin{problem}
@@ -76,10 +111,17 @@ she eats half of the chocolate remaining from the previous day.
     (in ounces) after \(x\) days.
 \end{enumerate}
 
-\begin{instructorNotes}
-Use manipulatives if desired. You could cut up sheets of paper. This may
-give a jumping-off point to a discussion of infinity and Zeno's paradox.
-\end{instructorNotes}
+\begin{explanation}
+\begin{enumerate}
+    \item 2 oz.
+    \item 1 oz.
+    \item Since we are multiplying by \(\frac{1}{2}\) for each day that passes, 
+    Lyneth will have \(4\left(\frac{1}{2}\right)^5 = \frac{1}{8}\) oz. left.
+    \item She will not run out in theory, since we keep multiplying by a positive number. In practice,
+    this process may become untenable.
+    \item \(4\left(\frac{1}{2}\right)^x\)
+\end{enumerate}
+\end{explanation}
 \end{problem}
 
 \begin{problem}
@@ -100,5 +142,16 @@ Using the rules of exponents, answer the following questions.
     we used above to show that \(2^0 = 1\) does not work for \(0^0\).
     Why not?
 \end{enumerate}
+
+\begin{explanation}
+    \begin{enumerate}
+        \item \(2^1 \cdot 2^{-1} = 2^0\), so \(x = 0\).
+        \item \(2^1 = 2\) and \(2^{-1} = \frac{1}{2}\), so \(2^1 \cdot 2^{-1} = 1\).
+        \item Therefore, \(2^0 = 1\),
+        \item Nothing special about 2, besides the fact that it's positive. \(17^0 = 1\) as well.
+        \item If we try to use the argument to say that \(0^0 = 1\), we run into issues because \(0^{-1}\) is undefined,
+        since we can't divide by 0.
+    \end{enumerate}
+\end{explanation}
 \end{problem}
 \end{document}
