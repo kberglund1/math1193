@@ -54,10 +54,30 @@ Let \(f\) be defined by \(f(x) = \frac{3x}{x + 1}\).
 \item Find the range of \(f\).
 \end{enumerate}
  
-\begin{instructorNotes}
-    Students have issues with inverse functions and the relationship between domain and range of inverses.
-    This is also a difficult one for students to find the inverse of, since there are multiple instances of \(x\).
-\end{instructorNotes}
+\begin{explanation}
+\begin{enumerate}
+    \item The graph of \(f\) passes the horizontal line test, meaning each output corresponds to only one input, meaning that \(f\) is invertible.
+    \item The graph of \(g\) does not pass the horizontal line test, meaning there are some outputs that correspond to more than one input, meaning \(g\) is not invertible.
+    \item Since \(x = -1\) results in the denominator being 0, \(f(-1)\) is undefined. Since \(f(x)\) is defined for every other \(x\)-value,
+    the domain of \(f\) is \((-\infty, -1) \cup (-1, \infty)\), all real numbers except for \(-1\).
+    \item \begin{enumerate}
+        \item By the definition of inverses, since \(f(2)\) is defined, this is 2.
+        \item Since \(f(-1)\) is undefined, so is \(f^{-1}(f(-1))\).
+    \end{enumerate}
+    \item To find the inverse, we switch \(x\) and \(y\) and solve for \(y\).
+    \begin{align*}
+        x & = \frac{3y}{y + 1} \\
+        x(y + 1) & = 3y \\
+        xy + x & = 3y \\
+        x  = 3y - xy \\
+        x & = y(3 - x) \\
+        \frac{x}{3 - x} & = y \\
+        f^{-1}(x) = \frac{x}{3 - x}
+    \end{align*}
+    \item The range of \(f\) is the domain of \(f^{-1}\). Since \(f^{-1}\) is only undefined at \(x = 3\), its domain is \((-\infty, 3) \cup (3 \infty)\).
+    This means that the range of \(f\) is also  \((-\infty, 3) \cup (3 \infty)\).
+\end{enumerate}
+\end{explanation}
 \end{problem}
  
  
@@ -83,9 +103,23 @@ Let \(f\) be defined by \(f(x) = \frac{3x}{x + 1}\).
      
 \end{enumerate}
  
-\begin{instructorNotes}
-This is meant to draw on knowledge of inverse functions and also practice with the graphs of exponentials.
-\end{instructorNotes}
+\begin{explanation}
+\begin{enumerate}
+    \item Some examples of points are \((0, 1)\), \((1, 3)\), \((2, 9)\), or \((-1, 1/3)\).
+    Notice that when you plug in big negative numbers like \(x = -12\), \(3^x\) is close to 0, but not equal to 0.
+    This means that \((-12, 0)\) is not on the graph, but \(-12, 1/3^{12})\) is.
+    \item \begin{enumerate}
+        \item \(g\) and \(f\) are inverses, since switching \(x\) and \(y\) is what taking the inverse function does.
+        \item Some examples of points are \((1, 0)\), \((3, 1)\), \((9, 2)\), or \((1/3, -1)\) or \(1/3^{12}, -12\).
+        \item Two other names for \(f\) are \(g^{-1}\) and \(\log_3\).
+    \end{enumerate}
+    \item Since \(g\) has a horizontal asymptote at \(y = 0\), \(g^{-1}\) has a vertical asymptote at \(x = 0\). This can be 
+    explained by remembering that we switched \(x\) and \(y\).
+    \item The domain of \(g\) is \((-\infty, \infty)\), and the range of \(g\) is \((0, \infty)\), based on the graph.
+    Since the domain of the inverse is the range of the original function, the domain of \(f\) is \((0, \infty)\).
+    Since the range of the inverse is the domain of the original function, the range of \(f\) is \((-\infty, \infty)\).
+\end{enumerate}
+\end{explanation}
 \end{problem}
  
 \begin{problem}
@@ -94,34 +128,35 @@ This is meant to draw on knowledge of inverse functions and also practice with t
         \begin{center}
 \begin{tabular}{|c|c|}
  \(x\) & \(y\) \\ \hline
- 1 &  \\ 
+ 1 & 1 \\ 
  \(-2\) & 4 \\
-  & 4 \\
-  & 2 \\
- 0 & \\
- \(-9\) & \\
- & 3 \\
- \(\sqrt{2}\) & \\
+ 2 & 4 \\
+ \(\sqrt{2}\) & 2 \\
+ 0 & 0\\
+ \(-9\) & 81 \\
+ \(-\sqrt{3}\) & 3 \\
+ \(\sqrt{2}\) & 2\\
 \end{tabular}
 \end{center}
         \item Same thing, but for \(g(x) = e^x\).
                 \begin{center}
 \begin{tabular}{|c|c|}
  \(x\) & \(y\) \\ \hline
- 1 &  \\ 
+ 1 &  \(e\)\\ 
  2 & \(e^2\) \\
-  & \(e\) \\
- 0 & \\
- \(-9\) & \\
- & \(\sqrt{e}\) \\
-  & \(\frac{1}{e^2}\) \\
-  \(-\frac{1}{3}\) & \\
+ 1 & \(e\) \\
+ 0 & 1 \\
+ \(-9\) & \(\frac{1}{e^9}\)\\
+ \(\frac{1}{2}\)& \(\sqrt{e}\) \\
+  \(-2\)& \(\frac{1}{e^2}\) \\
+  \(-\frac{1}{3}\) & \(\frac{1}{\sqrt[3]{e}}\)\\
 \end{tabular}
 \end{center}
     \end{enumerate}
-\begin{instructorNotes}
-    This is meant to convince students to be comfortable with square roots of non-square numbers and powers of \(e\).
-\end{instructorNotes}
+\begin{explanation}
+    Notice that some cells in the top have multiple answers. To see why, consider the graph \(y = x^2\).
+    Every \(y\)-value except 0 corresponds to 2 \(x\)-values. Since \(x^2\) is not invertible, you have to make choices when writing down which \(x\) value.
+\end{explanation}
 \end{problem}
  
 \begin{problem}
@@ -147,7 +182,17 @@ Tom's work is as follows:
  
  
 Whose work is correct? Why? How could you check?
- 
+
+\begin{explanation}
+    Aaliyah's work is correct. 
+    
+    Recall that \(b^{x}\cdot b^y = b^{x + y}\). To see this, remember that
+    \(b^x\) is the product of \(x\) copies of \(b\), and \(b^y\) is the product of \(y\) copies of \(b\).
+    When multiplied, you are taking the product of \(x + y\) copies of \(b\).
+
+    Therefore, \(10^{\log(3)} \cdot 10^{\log(5)} = 10^{\log(3) + \log(5)}\). Even though, \(log(3)\) and \(log(5)\) are unfamiliar
+    numbers, the properties of exponents still hold. 
+\end{explanation}
 \end{problem}
  
 \begin{problem}
@@ -169,6 +214,18 @@ Make sure to write down your work at each step.
     \item How did I put \(\log_2(5)\) into my calculator? What about
     \(\log_7(19)\)?
 \end{enumerate}
+
+\begin{explanation}
+    Here's the work:
+    \begin{align*}
+        \log_2(5) & = x \\
+        2^x & = 5 \\
+        \ln(2^x) & = \ln(5) \\
+        x\ln(2) & = \ln(5) \\
+        x & = \frac{\ln(5)}{\ln(2)}
+    \end{align*}
+    Therefore, instead of plugging \(\log_2(5)\) into my calculator, I plugged in \(\ln(5)/\ln(2)\). Same for \(\ln(19)/\ln(7)\).
+\end{explanation}
 \end{problem}
  
 \begin{problem}
@@ -178,6 +235,12 @@ Make sure to write down your work at each step.
     \item Sky was asked to simplify \(e^{\ln(-2)}\) and said the answer was
     \(-2\). Are they correct? Why or why not? Write down your reasoning.
 \end{enumerate}
+\begin{explanation}
+    \begin{enumerate}
+        \item Since \(e^{-2}\) is defined and \(\ln\) and \(e^x\) are inverses, the expression simplifies to \(-2\).
+        \item Since \(\ln(-2)\) is undefined, the whole expression is also undefined.
+    \end{enumerate}
+\end{explanation}
 \end{problem}
  
 \end{document}
