@@ -1,0 +1,147 @@
+\documentclass[noauthor]{ximera}
+
+\title{Week 13}
+\author{Math 1193 Design Team}
+
+\begin{document}
+\begin{abstract}
+    Solutions for Week 13.
+\end{abstract}
+\maketitle
+
+\begin{problem}
+The king has decided to provide a family with rice for a month. 
+On day 0, he gives them 1 grain of rice. On each subsequent day, 
+he gives them 100\% more rice than the previous day. 
+
+\begin{enumerate}
+    \item On day 1, how much rice does the king give the family?
+    \item What about on day 2?
+    \item Day 12?
+    \item Organize your information in a reasonable way.
+    \item What is the role of exponentiation in this problem? Write down
+    your answer in a sentence.
+    \item Write down a function that takes a number of days \(x\)
+    and returns the amount \(f(x)\) of grains of rice the king gives the
+    family on day \(x\).
+\end{enumerate}
+
+\begin{explanation}
+    Note that 100\% more rice means the full amount of rice from the previous day. This means that in total, the king
+    gives the amount from the previous day, plus the full amount from the previous day, or as a normal person would say,
+    twice the amount from the previous day.
+\begin{enumerate}
+    \item On day 0, he gave 1 grain, so on day 1, he gives 2.
+    \item On day 2, he gives 4 grains.
+    \item You could continue to double and keep track of the days to figure this out. We can say more about this approach later, but the answer ends up being 4096.
+    \item A way to organize this information is with a table. 
+    \begin{table}[]
+\centering
+\begin{tabular}{c|c}
+day & amount of rice (grains) \\ \hline
+0 & 1 \\
+1 & 2 \\
+2 & 4 \\
+3 & 8 \\
+4 & 16 \\
+5 & 32 \\
+6 & 64 \\
+7 & 128 \\
+8 & 256 \\
+9 & 512 \\
+10 & 1024 \\
+11 & 2048 \\
+12 & 4096
+\end{tabular}
+\end{table}
+    \item To get the number of grains of rice for the following day, we double the previous day's amount. We're repeatedly multiplying by 2, which is the definition of exponentiation with a base of 2.
+    \item \(f(x) = 2^x\)
+\end{enumerate}
+\end{explanation}
+\end{problem}
+
+\begin{problem}
+Let's play a game! Divide into pairs and choose who will be
+Player 1 and Player 2. Below are the instructions.
+
+\begin{enumerate}
+    \item Player 1 starts with a hidden equation. On the left-hand side
+    is a number, and on the right-hand side is something complicated
+    with an \(x\) in it. For example: \(2 = 3x - 9\)
+    \item Player 1 then writes down on a scrap of paper each step/operation
+    applied to the \(x\) on the right-hand side, keeping in mind PEMDAS.
+    For example: Multiply by 3, subtract 9.
+    \item Player 1 gives the paper to Player 2 without showing the original
+    equation.
+    \item Player 2 then looks at the paper and writes down the steps
+    that need to be applied to both sides of the equation to undo
+    the process described by Player 1. For example: Add 9, divide by 3.
+    \item Both players then take Player 2's list and apply it to both sides
+    of the equation. What is the result of this process?
+\end{enumerate}
+
+Here are some example equations to get you started:
+\begin{enumerate}
+    \item \(1 = 2(x - 5)\)
+    \item \(4 = \log(x)\)
+    \item \(5 = \ln(x + 3) - 1\)
+    \item \(2 = 5 \cdot 9^x\) 
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+The number of bacteria in a colony decreases by 5\% per day in certain conditions.
+
+\begin{enumerate}
+    \item If the colony starts with 10,000 bacteria, how many are left
+    after 1 day in those conditions?
+    \item How many are left after 2 days?
+    \item 5 days?
+    \item When will there be 5000 bacteria left in the colony? Give an exact answer and an answer rounded to the nearest tenth. 
+\end{enumerate}
+
+\begin{explanation}
+\begin{enumerate}
+    \item Since the number of bacteria decreases by 5\%, it decreases by \(10000 \cdot 0.05 = 500\). Therefore, there are \(10000 - 500 = 9500\) bacteria left.
+    \item We can repeat this process: \(9500 \cdot 0.05 = 475\), so there are \(9500 - 475 = 9025\) bacteria left. 
+    Be careful! we can't just subtract 500 again, since 5\% of the current day's total is calculated with 9500 bacteria remaining, not 10,000. As the number of bacteria
+    gets smaller, 5\% of that total will also get smaller.
+    \item We could repeat the process 3 more times, but here's two other ways. 
+    
+    \textbf{Subtracting:} After 1 day, the number of bacteria left is
+    \[9500 = 10000 - 500 = 10000 - 10000 \cdot 0.05\]
+    This seems counterintuitive, but sometimes writing things unsimplified can let you see patterns. 
+    Notice that 10000 appears in both terms of the rightmost expression, so we can factor it as \(10000(1 - 0.05) = 10000 \cdot 0.95\).
+    
+    For the next day, our process was to take that total, multiply by 0.05 and subtract that result from our total, but again, let's unsimplify:
+    \[9500 - 9500 \cdot 0.05 = 9500(1 - 0.05) = 9500 \cdot 0.95\] 
+    But wait! We have a similar expression for 9500 that we've already found: \(9500 = 10000 \cdot 0.95\). So in summary, on the second day, there are 
+    \[9500 \cdot 0.95 = 10000 \cdot 0.95 \cdot 0.95 = 10000(0.95)^2\]
+    bacteria left. 
+
+    You can guess that after 3 days, there are \(10000(0.95)^3\) bacteria left, and after 5 days, \(10000(0.95)^5 \approx 8574\) bacteria left.
+
+    \textbf{Percent Remaining:} 
+
+\end{enumerate}
+\end{explanation}
+\end{problem}
+
+\begin{problem}
+Julia worked on solving the equation \(\ln(x) + \ln(x - 21) = 2\). Her
+work is as follows:
+
+\begin{align*}
+\ln(x) + \ln(x - 21) & = 2 & \text{(original equation)}\\
+e^{\ln(x)} + e^{\ln(x - 21)} & = e^2 & \text{(exponentiating on both sides)} \\
+x + (x - 21) & = e^2 & \text{(canceling logs and exponents)}\\
+2x - 21 & = e^2 & \text{(combining like terms)}\\
+2x & = e^2 + 21 & \text{(adding 21 on both sides)}\\
+x & = \frac{e^2 + 21}{2} & \text{(dividing by 2 on both sides)}\\
+\end{align*}
+
+Is Julia's work correct? How can you tell? If it's not correct, identify
+the step in which she made a mistake and try to find a solution.
+\end{problem}
+
+\end{document}
