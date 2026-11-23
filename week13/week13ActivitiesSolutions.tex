@@ -108,7 +108,7 @@ The number of bacteria in a colony decreases by 5\% per day in certain condition
     gets smaller, 5\% of that total will also get smaller.
     \item We could repeat the process 3 more times, but here's two other ways. 
     
-    \textbf{Subtracting:} After 1 day, the number of bacteria left is
+    \textbf{Subtracting off the Decrease:} After 1 day, the number of bacteria left is
     \[9500 = 10000 - 500 = 10000 - 10000 \cdot 0.05\]
     This seems counterintuitive, but sometimes writing things unsimplified can let you see patterns. 
     Notice that 10000 appears in both terms of the rightmost expression, so we can factor it as \(10000(1 - 0.05) = 10000 \cdot 0.95\).
@@ -121,7 +121,34 @@ The number of bacteria in a colony decreases by 5\% per day in certain condition
 
     You can guess that after 3 days, there are \(10000(0.95)^3\) bacteria left, and after 5 days, \(10000(0.95)^5 \approx 8574\) bacteria left.
 
-    \textbf{Percent Remaining:} 
+    \textbf{Percent Remaining:} Another way to think about it is to realize that 95\% of the bacteria are left.
+
+    After 1 day, \(10000(0.95) = 9500\) bacteria remain. After 2 days, there are \(9500(0.95)\) bacteria left, but 
+    9500 can also be written unsimplifed, so this is\(10000(0.95)(0.95) = 10000(0.95)^2\). Similarly, after 5 days, there are 
+    \(10000(0.95)^5 \approx 8574\) bacteria left. 
+
+    \item We saw in the previous part that after day \(x\), the number of bacteria left is \(10000(0.95)^x\). The inputs, \(x\), 
+    are in days, and the outputs are in bacteria. If we want to know when there are 5000 bacteria, our unknown is \(x\), and our output is 5000.
+
+    Setting up and solving an equation:
+    \begin{align*}
+        5000 & = 10000(0.95)^x \\
+        \frac{5000}{10000} & = 0.95^x \\
+        \frac{1}{2} & = 0.95^x \\
+        \ln\left(\frac{1}{2}\right) & = \ln(0.95^x) \\
+        \ln\left(\frac{1}{2}\right) & = x \ln(0.95) \\
+        \frac{\ln\left(\frac{1}{2}\right)}{\ln(0.95)} & = x
+    \end{align*}
+
+    This is an exact answer, even thought it looks weird. When we plug it into our calculator and round
+    to the nearest tenth, we obtain the approximation 13.5 days. 
+
+    We could have also taken the logarithm with any base, and in fact, 
+    \begin{align*}
+        \frac{1}{2} & = 0.95^x \\
+        \log_{0.95}\left(\frac{1}{2}\right) & = x
+    \end{align*}
+    is a bit of a shorter route.
 
 \end{enumerate}
 \end{explanation}
@@ -142,6 +169,35 @@ x & = \frac{e^2 + 21}{2} & \text{(dividing by 2 on both sides)}\\
 
 Is Julia's work correct? How can you tell? If it's not correct, identify
 the step in which she made a mistake and try to find a solution.
+
+\begin{explanation}
+In the first step when Julia exponentiates on both sides, she is applying the exponential function incorrectly.
+
+Remember that the exponential function \(e^x\) takes its input as an exponent, so exponentiating on both sides actually results in 
+\(e^{\ln(x) + \ln(x - 21)} = e^2\). Only one base of \(e\) should appear. 
+
+Now we can use the product property of logs to obtain
+\begin{align*}
+    e^{\ln(x) + \ln(x - 21)} & = e^2 \\
+    e^{\ln(x(x - 21))} & = e^2 \\
+    x^2 - 21x & = e^2 \\
+    x^2 - 21x - e^2 & = 0\\
+\end{align*}
+
+Using the quadratic formula, we find the roots \(x = \frac{21 \pm \sqrt{21^2 + 4e^2}}{2}\).
+
+However, we need to check that these are actually solutions, since \(\ln(x)\) is not defined for negative numbers. 
+We need to check that both \(\ln(x)\) and \(ln(x - 21)\) are defined for both candidate solutions, since these expressions
+appear in our original equation. 
+
+We can check that \(x = \frac{21 - \sqrt{21^2 + 4e^2}}{2}\) (the version with the minus sign) is negative, so \(\ln(x)\) 
+is not defined for this candidate.
+
+Since the version with the plus sign, \(x = \frac{21 + \sqrt{21^2 + 4e^2}}{2}\) is positive, \(\ln(x)\) is defined for this candidate.
+Also, \(\frac{21 + \sqrt{21^2 + 4e^2}}{2} - 21\) is positive, so \(\ln(x - 21)\) is also defined.
+
+Therefore, our only solution is \(\frac{21 + \sqrt{21^2 + 4e^2}}{2}\).
+\end{explanation}
 \end{problem}
 
 \end{document}
